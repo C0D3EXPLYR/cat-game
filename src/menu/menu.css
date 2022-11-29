@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+  font-family: "Press Start 2P";
+  background-image: url('../menu/menu_items/menu_background.gif');
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-color: rgb(190, 158, 129);
+}
+.App {
+  text-align: center;
+  color: yellow;
+}
+
+.menu_header{
+  font-size: 60px;
+  display: block;
+}
+
+.menu_button_box{
+  margin-top: 10%;
+    margin-right: 60%;
+    margin-bottom: 0px;
+    margin-left: auto;
+  width: 60px;
+}
+
+.button{
+  display: block;
+  font-family: "Press Start 2P";
+  font-size: 45px;
+  border: none;
+  background-color: rgba(52, 52, 52, 0.0);
+  color: yellow;
+  padding: 12px;
+}
+
+.button:hover{
+  color: orangered;
+}
