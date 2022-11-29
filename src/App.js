@@ -1,24 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import React  from 'react';
+import { useEffect } from 'react';
+import { PropsWithChildren } from 'react';
+import './menu/menu.css';
+// import audioSong from "./menu_items/menu_audio.mov";
+import Button from 'react';
+import MenuPage from './menu/menu';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MenuPage/>
   );
 }
 
