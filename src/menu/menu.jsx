@@ -9,15 +9,11 @@ import axios from "axios";
 const client= axios.create({baseURL: "http://127.0.0.1:8000"});
 
 function handleStart(){
-  // client
-  //   .post("/api/test")
-  //   .then((response) => {
-  //     console.log(response.data);
-  //   })
   client
   .post("/api/test")
   .then((response) => {
-    console.log(response.data)
+    //console.log(response.data);
+    window.location.href='/level1';
   })
   .catch((err) => {
     console.log(err);
