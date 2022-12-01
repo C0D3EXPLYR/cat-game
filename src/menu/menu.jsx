@@ -4,15 +4,27 @@ import { PropsWithChildren } from 'react';
 import './menu.css';
 // import audioSong from "./menu_items/menu_audio.mov";
 import Button from 'react';
-//import axiosConfig from '../axiosConfig';
+import axios from "axios";
+
+const client= axios.create({baseURL: "http://127.0.0.1:8000"});
+
+function handleStart(){
+  // client
+  //   .post("/api/test")
+  //   .then((response) => {
+  //     console.log(response.data);
+  //   })
+  client
+  .post("/api/test")
+  .then((response) => {
+    console.log(response.data)
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+}
 
 
-// handleStart(() => {
-//   axiosConfig
-//     .post("api/register", {
-//       clicked: true,
-//     })
-// });
 
 
 function MenuPage(){
@@ -21,7 +33,7 @@ function MenuPage(){
     <div className='App'>
       <h1 className='menu_header'>Sandcat on adventure</h1>
       <div className='menu_button_box'>
-        <button className='button' >Start</button>
+        <button className='button' onClick={handleStart}>Start</button>
         <button className='button'>Settings</button>
         <button className='button'>Credits</button>
       </div>
