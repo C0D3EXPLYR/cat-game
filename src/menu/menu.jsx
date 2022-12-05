@@ -12,7 +12,7 @@ function handleStart(){
   client
   .post("/api/test")
   .then((response) => {
-    //console.log(response.data);
+    console.log(response.data);
     window.location.href='/level1';
   })
   .catch((err) => {

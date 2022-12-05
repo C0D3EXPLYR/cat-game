@@ -3,8 +3,7 @@ import './App.css';
 import React  from 'react';
 import { useEffect } from 'react';
 import { PropsWithChildren } from 'react';
-import './menu/menu.css';
-import {Router, Route} from 'react-router-dom';
+import {Router, Route, Routes} from 'react-router-dom';
 import LevelOne from './menu/levels/level1';
 // import audioSong from "./menu_items/menu_audio.mov";
 import Button from 'react';
@@ -35,7 +34,27 @@ function App() {
     //     <LevelOne/> 
     //     </Route>
     // </Router>  
-    <LevelOne/>
+    const routes: CustomRoute[] = [
+
+    ];
+<div className='App'>
+    <Router>
+      <Routes>
+        {Routes.map((customRoute) => {
+          return (
+            <Route exact path={customRoute.path} key={"route" + customRoute.path}>
+              <Page>{customRoute.html}</Page>  
+            </Route>
+          );
+        })}
+        {/* <Route path={baseURL} component={() => <MenuPage/>} />
+        <Route path={baseURL+"level1"} component={() => <LevelOne/>} /> */}
+      </Routes>
+    </Router>
+</div>
+
+//    <LevelOne/>
+    //<MenuPage/>
   );
 }
 
