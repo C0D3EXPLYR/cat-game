@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import {Router, Route, Routes, useRoutes, BrowserRouter} from 'react-router-dom';
 import React  from 'react';
 import { useEffect } from 'react';
 import { PropsWithChildren } from 'react';
-import {Router, Route, Routes} from 'react-router-dom';
 import LevelOne from './menu/levels/level1';
 // import audioSong from "./menu_items/menu_audio.mov";
 import Button from 'react';
@@ -24,45 +24,25 @@ function App() {
     }
     
   })
-  // const routes: customRoute[] = [
-  //   {
-  //     path: "/",
-  //     html: <MenuPage></MenuPage>
-  //   }, 
-  //   {
-  //     path: "/level1",
-  //     html: <LevelOne></LevelOne>
-  //   }, 
-  // ];
+const App = () => {
+  const routes = useRoutes([
+    { path: '/', element: <MenuPage /> },
+    { path: '/level1', element: <LevelOne /> },
+    { path: 'usluge', element: <MenuPage /> },
+    { path: 'galerija', element: <MenuPage /> },
+    { path: 'cjenovnik', element: <MenuPage /> },
+    { path: 'kontakt', element: <MenuPage /> }
+]);
 
-  return (
-    // <Router>
-    //     <Route exact path="http://localhost:3000/">
-    //       <MenuPage/>
-    //     </Route>
-    //     <Route exact path="http://localhost:3000/level1">
-    //     <LevelOne/> 
-    //     </Route>
-    // </Router>  
-    {/*<Router>
-      <Routes>
-        {routes.map((customRoute) => {
-          return (
-            <Route exact path={customRoute.path} key={"route" + customRoute.path}>
-              <Page>{customRoute.html}</Page>  
-            </Route>
-          );
-        })}
-        {/* <Route path={baseURL} component={() => <MenuPage/>} />
-        <Route path={baseURL+"level1"} component={() => <LevelOne/>} /> */}
-      
-<div className='App'>
-
-</div>
-
-//    <LevelOne/>
-    //<MenuPage/>
- // );
+return routes;
 }
+  
 
+return (
+  <BrowserRouter>
+      <App/>
+  </BrowserRouter>
+);
+  //setHomePage('register')
+}
 export default App;
