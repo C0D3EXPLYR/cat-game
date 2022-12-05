@@ -24,6 +24,16 @@ function App() {
     }
     
   })
+  // const routes: customRoute[] = [
+  //   {
+  //     path: "/",
+  //     html: <MenuPage></MenuPage>
+  //   }, 
+  //   {
+  //     path: "/level1",
+  //     html: <LevelOne></LevelOne>
+  //   }, 
+  // ];
 
   return (
     // <Router>
@@ -34,13 +44,9 @@ function App() {
     //     <LevelOne/> 
     //     </Route>
     // </Router>  
-    const routes: CustomRoute[] = [
-
-    ];
-<div className='App'>
-    <Router>
+    {/*<Router>
       <Routes>
-        {Routes.map((customRoute) => {
+        {routes.map((customRoute) => {
           return (
             <Route exact path={customRoute.path} key={"route" + customRoute.path}>
               <Page>{customRoute.html}</Page>  
@@ -49,13 +55,14 @@ function App() {
         })}
         {/* <Route path={baseURL} component={() => <MenuPage/>} />
         <Route path={baseURL+"level1"} component={() => <LevelOne/>} /> */}
-      </Routes>
-    </Router>
+      
+<div className='App'>
+
 </div>
 
 //    <LevelOne/>
     //<MenuPage/>
-  );
+ // );
 }
 
 export default App;
