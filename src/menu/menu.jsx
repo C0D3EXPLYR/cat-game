@@ -19,11 +19,19 @@ function handleStart(){
     console.log(err);
   })
 }
-
+// TO DO LIST
+// Make music for the menu 
+// Fix jump bug
+// Change css file on different route page 
+// Make platforms
+// Make a scroll background image inf scroll 
 
 
 
 function MenuPage(){
+  const bodyElement= document.body;
+  bodyElement.classList.remove("level_one");
+  bodyElement.classList.add("menu");
 
   return (
     <div className='App'>

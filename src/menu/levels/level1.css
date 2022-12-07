@@ -1,6 +1,16 @@
-body{
-    background-image: url('../menu_items/background_level1.png');
-    background-size: 100%;
+body.level_one{
+    background-image: url('../menu_items/newbackground_level1.png');
+    background-repeat: repeat-x;
+    background-size: 90%;
 }
 
-    
+.animate{
+    animation: jump 1000ms ;
+}
+
+@keyframes jump{
+    0%{top: 636px;}
+    30%{top: 486px;}
+    30%{top: 486px;}
+    100%{top: 636px;}
+}
